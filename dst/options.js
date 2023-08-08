@@ -13,9 +13,9 @@ const chromeStorageNames = [
     "Openu-password-field",
     "Openu-ID-field",
 ];
+const inputFieldsIDS = ["username", "password", "id-number"];
 document.getElementById("my-form").addEventListener("submit", (e) => {
     e.preventDefault();
-    const inputFieldsIDS = ["username", "password", "id-number"];
     // check if all inputs were indeed typed
     for (let i = 0; i < inputFieldsIDS.length; i++) {
         let elem = document.getElementById(inputFieldsIDS[i]);
@@ -32,3 +32,14 @@ document.getElementById("my-form").addEventListener("submit", (e) => {
     }
     alert("Settings saved Successfully!");
 });
+function setInputFields() {
+    for (let i = 0; i < chromeStorageNames.length; i++) {
+        chrome.storage.local.get(chromeStorageNames[i]).then((result) => {
+            if (result[chromeStorageNames[i]]) {
+                document.getElementById(inputFieldsIDS[i]).value =
+                    result[chromeStorageNames[i]];
+            }
+        });
+    }
+}
+setInputFields();
