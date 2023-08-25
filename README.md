@@ -3,6 +3,9 @@ This extension allows you to save your login information for the Open University
 
 _**Please notice that your login information is not being saved in an encrypted manner!**_
 
+# Technical Information:
+This extension was written using **TypeScript**.
+
 # Installation:
 Download the source code, then go to chrome://extensions, and then click on "Load unpacked extension" using the path in which you stored the source code.
 
