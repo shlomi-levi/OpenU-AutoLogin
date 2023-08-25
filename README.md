@@ -1,5 +1,5 @@
 # OpenU-AutoLogin
-This extension allows you to save your login information locally so that everytime that you try to enter the Open University's website it you are being automatically logged in.
+This extension allows you to save your login information for the Open University's website locally, so that each time you enter the Open University's website you are being automatically logged in.
 
 _**Please notice that your login information is not being saved in an encrypted manner!**_
 
